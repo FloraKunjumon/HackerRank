@@ -1,0 +1,30 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*
+public class Solution {
+public static void main (String []args)throws IOException{
+    Scanner input=new Scanner (System.in);
+    int n;
+    int t=100;
+    n=input.nextInt();
+    ArrayList<Integer> b = new ArrayList<Integer>(t);
+int i=0;
+int count=1;
+    while (n>0){
+        
+        b.add(n%2);
+        n=n/2;
+        i++;
+      }
+    for (i=0; i<b.size()-1;i++){
+    if (b.get(i).equals(1) && b.get(i+1).equals(1)){
+count=count+1;
+    }
+}
+System.out.println(count);
+}
+}
